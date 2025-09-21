@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        {
+          "header": "User-Agent",
+          "operation": "set",
+          "value": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1"
+        },
+        {
+          "header": "Sec-CH-UA",
+          "operation": "set",
+          "value": "\"Safari\";v=\"17\", \"Not;A=Brand\";v=\"8\", \"Mobile Safari\";v=\"17\""
+        },
+        {
+          "header": "Sec-CH-UA-Mobile",
+          "operation": "set",
+          "value": "?1"
+        },
+        {
+          "header": "Sec-CH-UA-Platform",
+          "operation": "set",
+          "value": "\"iOS\""
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*",
+      "resourceTypes": ["main_frame", "sub_frame", "stylesheet", "script", "image", "font", "object", "xmlhttprequest", "ping", "csp_report", "media", "websocket", "other"]
+    }
+  }
+]
