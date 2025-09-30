@@ -1,6 +1,6 @@
 # Apple Device Spoofing Extension / 苹果设备伪装插件
 
-[English](./README_en.md) | 中文
+[English](./README_en.md) | 简体中文
 
 <div align="center">
   <h1>Apple Device Spoofing Extension</h1>
