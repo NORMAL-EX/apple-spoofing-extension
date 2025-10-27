@@ -17,6 +17,7 @@
       --accent-color: #007AFF;
       --success-color: #34c759;
       --warning-color: #ff9500;
+      --danger-color: #ff3b30;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -32,6 +33,7 @@
         --accent-color: #0a84ff;
         --success-color: #30d158;
         --warning-color: #ff9f0a;
+        --danger-color: #ff453a;
       }
     }
 
@@ -42,7 +44,7 @@
     }
 
     body {
-      width: 320px;
+      width: 360px;
       padding: 16px;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
       background: var(--bg-color);
@@ -187,6 +189,50 @@
       color: var(--text-color);
     }
 
+    /* 反歧视统计样式 */
+    .stats-card {
+      background: linear-gradient(135deg, var(--danger-color) 0%, var(--warning-color) 100%);
+      color: white;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .stats-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .stats-total {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 8px 0;
+    }
+
+    .stats-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .stats-item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .loading {
+      text-align: center;
+      color: var(--secondary-text);
+      font-size: 12px;
+    }
+
     .footer {
       margin-top: 16px;
       padding-top: 12px;
@@ -195,6 +241,22 @@
       color: var(--secondary-text);
       text-align: center;
     }
+
+    .footer-motto {
+      font-style: italic;
+      margin-top: 8px;
+      color: var(--accent-color);
+      font-weight: 500;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
   </style>
 </head>
 <body>
@@ -202,7 +264,17 @@
     <svg class="apple-icon" viewBox="0 0 24 24" fill="currentColor">
       <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
     </svg>
-    <h1>设备伪装</h1>
+    <h1>反设备歧视卫士</h1>
+  </div>
+
+  <!-- 反歧视统计卡片 -->
+  <div class="stats-card" id="stats-card">
+    <div class="stats-header">
+      🛡️ 反歧视拦截统计
+    </div>
+    <div id="stats-content" class="loading pulse">
+      正在获取数据...
+    </div>
   </div>
 
   <div class="card">
@@ -230,7 +302,7 @@
     <label for="device-type" style="display: block; margin-bottom: 8px;">设备类型</label>
     <select id="device-type">
       <option value="auto">自动检测</option>
-      <option value="iphone" selected>iPhone</option>
+      <option value="iphone">iPhone</option>
       <option value="ipad">iPad</option>
       <option value="mac">Mac</option>
     </select>
@@ -238,6 +310,9 @@
 
   <div class="footer">
     刷新页面以应用更改
+    <div class="footer-motto">
+      💪 科技面前，人人平等
+    </div>
   </div>
 
   <script src="popup.js"></script>
