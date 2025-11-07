@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Apple Device Spoofing",
-  "version": "1.0.0",
-  "description": "让所有设备都显示为苹果设备（iPhone或Mac）",
+  "version": "2.0.0",
+  "description": "反设备歧视卫士 - 让所有设备都显示为苹果设备，用技术吊打歧视者",
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestWithHostAccess",
@@ -31,10 +31,6 @@
     "default_popup": "popup.html"
   },
   "declarative_net_request": {
-    "rule_resources": [{
-      "id": "ruleset_1",
-      "enabled": true,
-      "path": "rules.json"
-    }]
+    "rule_resources": []
   }
 }

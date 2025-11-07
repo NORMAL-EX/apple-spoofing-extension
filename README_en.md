@@ -27,12 +27,23 @@ Now, **with one click, make all websites think you're using Apple devices!**
 
 ## 🎯 Features
 
+### 🔥 New v2.0 Upgrades
+
+- 🛡️ **Anti-Discrimination Stats Easter Egg** - Real-time display of blocked device detections, crushing "Hu Chenfeng-style" discrimination with data!
+- 🎨 **Dynamic Device Switching** - True implementation of iPhone/iPad/Mac mode switching
+- 🔐 **Advanced Anti-Fingerprinting** - Canvas, AudioContext, WebGL comprehensive protection
+- 🌏 **Enhanced Localization** - Perfect simulation of Apple device timezone, language, and fonts
+- 🔋 **Battery API Spoofing** - Even battery info is impeccable
+- 📊 **Real-time Stats Panel** - Updates every 3 seconds, witness the victory against discrimination
+
+### 💪 Core Features
+
 - 🔒 **Complete Spoofing** - Modifies all detectable browser APIs and properties
 - 🎨 **Multi-device Support** - Choose to spoof as iPhone, iPad, or Mac
 - 🌓 **Dark/Light Theme** - Automatically adapts to system theme settings
 - ⚡ **Real-time Switching** - No browser restart needed, just refresh the page
 - 🛡️ **Privacy Protection** - All processing done locally, no data collection
-- 🎭 **Anti-"Android" Discrimination** - Make "Android Computer" a thing of the past
+- 🎭 **Anti-"Android" Discrimination** - Make "Android Computer" history, technically slap discriminators
 
 ## 📦 Installation
 
